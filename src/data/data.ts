@@ -1,3 +1,6 @@
+import { Code, Layout, Server, Wrench } from "lucide-react"
+import type { FC } from "react"
+
 export type Project = {
     title: string
     description: string
@@ -9,6 +12,7 @@ export type Project = {
 export type SkillGroup = {
     category: string
     items: string[]
+    icon: FC<{ className?: string }>
 }
 
 export const personal = {
@@ -24,18 +28,22 @@ export const personal = {
 export const skills: SkillGroup[] = [
     {
         category: "Languages",
+        icon: Code,
         items: ["TypeScript", "JavaScript"]
     },
     {
         category: "Frontend",
+        icon: Layout,
         items: ["React", "HTML", "CSS", "Tailwind CSS"]
     },
     {
         category: "Backend",
+        icon: Server,
         items: ["Node.js", "Express", "MySQL"]
     },
     {
         category: "Tools",
+        icon: Wrench,
         items: ["Git", "GitHub", "VS Code"]
     }
 ]
