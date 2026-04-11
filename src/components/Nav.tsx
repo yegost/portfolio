@@ -2,10 +2,10 @@ import { personal } from "../data/data"
 import { useState } from "react"
 
 const links = [
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
+    { label: "About", href: "#about", id: '1' },
+    { label: "Skills", href: "#skills", id: '2' },
+    { label: "Projects", href: "#projects", id: '3' },
+    { label: "Contact", href: "#contact", id: '4' },
 ]
 
 function Nav() {
@@ -13,7 +13,7 @@ function Nav() {
 
     return(
         <>
-            <nav className="sticky top-0 left-0 right-0 z-50  backdrop-blur-sm">
+            <nav className="top-0 left-0 right-0 z-50  backdrop-blur-sm" id="about">
                 <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
                     <span className="font-mono text-2xl font-bold">
                         {personal.name}
@@ -57,13 +57,13 @@ function Nav() {
                     <ul className="flex flex-col">
                         {links.map(link => (
                             <li
-                                key={link.href}
-                                className="p-2 hover:bg-neutral-200 cursor-pointer rounded"
+                                key={link.id}
+                                className="hover:bg-neutral-200 cursor-pointer rounded"
                             >
                                 <a
-                                    href={link.href}
                                     onClick={() => setOpenNav(false)}
-                                    className="text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
+                                    href={link.href}
+                                    className="flex p-2 text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
                                 >
                                     {link.label}
                                 </a>

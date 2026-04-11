@@ -13,11 +13,11 @@ export type SkillGroup = {
 
 export const personal = {
     name: "Alexandru Cazacu",
-    title: "Front-End Developer",
-    bio: "..",
+    title: "Front-End Development",
+    bio: "Detail-oriented frontend developer focused on crafting clean, responsive, and user-friendly interfaces.",
     location: "London, UK",
     email: "..",
-    github: "..",
+    github: "https://github.com/yegost",
     linkedin: "..",
 }
 

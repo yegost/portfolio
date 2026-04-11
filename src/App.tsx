@@ -1,10 +1,12 @@
 import Nav from "./components/Nav"
+import Hero from "./components/Hero"
 
 function App() {
   return (
     <>
       <Nav />
-      <h1>hi</h1>
+      <Hero />
+      <h1 className="py-200" id="skills">hi</h1>
     </>
   )
 }
