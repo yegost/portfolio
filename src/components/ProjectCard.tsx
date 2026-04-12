@@ -1,5 +1,6 @@
-import { ArrowUpRight, FolderOpen } from "lucide-react"
+import { ArrowUpRight, FolderOpen, ChevronLeft, ChevronRight } from "lucide-react"
 import type { Project } from "../data/data"
+import { useState } from "react"
 
 type Props = {
     project: Project
@@ -7,6 +8,12 @@ type Props = {
 }
 
 function ProjectCard({ project, index }: Props) {
+    const [current, setCurrent] = useState(0)
+    const images = project.images ?? []
+
+    const prev = () => setCurrent(i => (i === 0 ? images.length - 1 : i - 1))
+    const next = () => setCurrent(i => (i === images.length - 1 ? 0 : i + 1))
+
     return(
         <div
             key={project.title}
@@ -14,13 +21,40 @@ function ProjectCard({ project, index }: Props) {
                 index % 2 !== 0 ? "sm:flex-row-reverse" : ""
             }`}
         >
-            {project.images && (
-                <div className="w-full sm:w-1/2 shrink-0">
+            {images.length > 0 && (
+                <div className="relative w-full sm:w-1/2 shrink-0">
                     <img 
-                        src={project.images[0]}
-                        alt={project.title}
+                        src={images[current]}
+                        alt={`${project.title} screenshot ${current + 1}`}
                         className="w-full h-60 object-cover rounded-xl"
                     />
+                    {images.length > 1 && (
+                        <>
+                            <button
+                                onClick={prev}
+                                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-1 transition-colors"
+                            >
+                                <ChevronLeft className="w-4 h-4 text-neutral-700" />
+                            </button>
+                            <button
+                                onClick={next}
+                                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-1 transition-colors"
+                            >
+                                <ChevronRight className="w-4 h-4 text-neutral-700" />
+                            </button>
+                            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                                {images.map((_, i) => (
+                                    <button
+                                        key={i}
+                                        onClick={() => setCurrent(i)}
+                                        className={`w-1.5 h-1.5 rounded-full transiton-colors ${
+                                            i === current ? "bg-white" : "bg-white/40"
+                                        }`}
+                                    ></button>
+                                ))}
+                            </div>
+                        </>
+                    )}
                 </div>
             )}
             <div className="w-full sm:w-1/2 flex flex-col gap-3">

@@ -71,9 +71,9 @@ export const projects: Project[] = [
     github: "https://github.com/yegost/artist-search-app",
     live: "https://artist-search-app-3dev.onrender.com/",
     images: [
+        "./artistsearch2.png",
         "./artistsearch.png", 
         "./artistsearch1.png", 
-        "./artistsearch2.png"
     ],
   },
   {
