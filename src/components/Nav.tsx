@@ -13,7 +13,7 @@ function Nav() {
 
     return(
         <>
-            <nav className="top-0 left-0 right-0 z-50  backdrop-blur-sm" id="about">
+            <nav className="top-0 left-0 right-0 z-50 bg-neutral-100 backdrop-blur-sm" id="about">
                 <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
                     <span className="font-mono text-2xl font-bold">
                         {personal.name}

@@ -1,6 +1,7 @@
 import Nav from "./components/Nav"
 import Hero from "./components/Hero"
 import Skills from "./components/Skills"
+import Projects from "./components/Projects"
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <Nav />
       <Hero />
       <Skills />
-      <h1 className="py-200" id="contact">hi</h1>
+      <Projects />
+      <h1 className="py-2" id="contact">hi</h1>
     </>
   )
 }

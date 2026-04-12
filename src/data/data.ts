@@ -7,6 +7,7 @@ export type Project = {
     stack: string[]
     github: string
     live?: string
+    images?: string[]
 }
 
 export type SkillGroup = {
@@ -22,7 +23,7 @@ export const personal = {
     location: "London, UK",
     email: "..",
     github: "https://github.com/yegost",
-    linkedin: "..",
+    linkedin: "https://www.linkedin.com/in/alexcazacu1/",
 }
 
 export const skills: SkillGroup[] = [
@@ -55,6 +56,13 @@ export const projects: Project[] = [
     stack: ["React", "Tailwind CSS"],
     github: "https://github.com/yegost/movie-search-app",
     live: "https://yegost.github.io/movie-search-app/",
+    images: [
+        "./moviesearch.png", 
+        "./moviesearch1.png", 
+        "./moviesearch2.png",
+        "./moviesearch3.png",
+        "./moviesearch4.png",
+    ],
   },
   {
     title: "Artist Search App",
@@ -62,6 +70,11 @@ export const projects: Project[] = [
     stack: ["JavaScript", "HTML", "CSS", "Node.js", "Express"],
     github: "https://github.com/yegost/artist-search-app",
     live: "https://artist-search-app-3dev.onrender.com/",
+    images: [
+        "./artistsearch.png", 
+        "./artistsearch1.png", 
+        "./artistsearch2.png"
+    ],
   },
   {
     title: "Weather App",
@@ -69,5 +82,9 @@ export const projects: Project[] = [
     stack: ["JavaScript", "HTML", "CSS", "Node.js", "Express"],
     github: "https://github.com/yegost/artist-search-app",
     live: "https://weather-app-phi-ten-60.vercel.app/",
+    images: [
+        "./weatherapp.png", 
+        "./weatherapp1.png", 
+    ],
   }
 ]
