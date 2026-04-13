@@ -26,7 +26,7 @@ function ProjectCard({ project, index }: Props) {
                     <img 
                         src={images[current]}
                         alt={`${project.title} screenshot ${current + 1}`}
-                        className="w-full h-60 object-cover rounded-xl"
+                        className="w-full h-60 object-cover rounded-xl border-2 border-neutral-300 dark:border-neutral-400"
                     />
                     {images.length > 1 && (
                         <>
@@ -58,13 +58,13 @@ function ProjectCard({ project, index }: Props) {
                 </div>
             )}
             <div className="w-full sm:w-1/2 flex flex-col gap-3">
-                <p className="font-mono text-xs text-neutral-400 tracking-widest uppercase">
+                <p className="font-manrope text-xs text-neutral-400 dark:text-neutral-500 tracking-widest uppercase">
                     {project.stack.slice(0, 4).join(" / ")}
                 </p>
-                <h3 className="font-manrope text-2xl font-bold text-neutral-900">
+                <h3 className="font-manrope text-2xl font-bold text-neutral-900 dark:text-white">
                     {project.title}
                 </h3>
-                <p className="text-sm text-neutral-500 leading-relaxed">
+                <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
                     {project.description}
                 </p>
                 <div className="flex items-end gap-4">
@@ -73,16 +73,16 @@ function ProjectCard({ project, index }: Props) {
                             href={project.live}
                             target="_blank"
                             rel="noreferrer"
-                            className="flex items-center gap-1 text-sm text-neutral-600 border-b border-white hover:text-neutral-900 hover:border-neutral-900 transition-all duration-300"
+                            className="flex items-center gap-1 text-sm text-neutral-600 border-b border-white hover:text-neutral-900 hover:border-neutral-900 dark:text-white dark:hover:text-white dark:border-neutral-800 dark:hover:border-white transition-all duration-300"
                         >
-                            Live Demo <ArrowUpRight className="w-4 h-4 text-neutral-600" />
+                            Live Demo <ArrowUpRight className="w-4 h-4 text-neutral-600 dark:text-white" />
                         </a>
                     )}
                     <a
                         href={project.github}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center gap-1 text-sm text-neutral-600 border-b border-white hover:text-neutral-900 hover:border-neutral-900 transition-all duration-300"
+                        className="flex items-center gap-1 text-sm text-neutral-600 border-b border-white hover:text-neutral-900 hover:border-neutral-900 dark:text-white dark:hover:text-white dark:border-neutral-800 dark:hover:border-white transition-all duration-300"
                     >
                         Source
                         <FolderOpen className="w-4 h-4" />
