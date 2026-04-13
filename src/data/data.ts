@@ -21,7 +21,7 @@ export const personal = {
     title: "Front-End Development",
     bio: "Detail-oriented frontend developer focused on crafting clean, responsive, and user-friendly interfaces.",
     location: "London, UK",
-    email: "..",
+    email: "cazacualexandru485@gmail.com",
     github: "https://github.com/yegost",
     linkedin: "https://www.linkedin.com/in/alexcazacu1/",
 }
@@ -79,12 +79,13 @@ export const projects: Project[] = [
   {
     title: "Weather App",
     description: "A React weather app built with Vite that shows current weather and a 5-day forecast for any city.",
-    stack: ["JavaScript", "HTML", "CSS", "Node.js", "Express"],
-    github: "https://github.com/yegost/artist-search-app",
+    stack: ["React", "JavaScript", "CSS"],
+    github: "https://github.com/yegost/weather-app",
     live: "https://weather-app-phi-ten-60.vercel.app/",
     images: [
         "./weatherapp.png", 
         "./weatherapp1.png", 
+        "./weatherapp2.png", 
     ],
   }
 ]
