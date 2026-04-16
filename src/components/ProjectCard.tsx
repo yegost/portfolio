@@ -26,7 +26,7 @@ function ProjectCard({ project, index }: Props) {
                     <img 
                         src={images[current]}
                         alt={`${project.title} screenshot ${current + 1}`}
-                        className="w-full h-60 object-cover rounded-xl border-2 border-neutral-300 dark:border-neutral-400"
+                        className="w-full h-70 sm:h-60 object-cover rounded-xl border-2 border-neutral-300 dark:border-neutral-400"
                     />
                     {images.length > 1 && (
                         <>
@@ -47,7 +47,7 @@ function ProjectCard({ project, index }: Props) {
                                     <button
                                         key={i}
                                         onClick={() => setCurrent(i)}
-                                        className={`w-1.5 h-1.5 rounded-full transiton-colors ${
+                                        className={`w-1.5 h-1.5 rounded-full transition-colors ${
                                             i === current ? "bg-white" : "bg-white/40"
                                         }`}
                                     ></button>

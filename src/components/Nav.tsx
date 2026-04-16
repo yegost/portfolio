@@ -1,6 +1,7 @@
 import { personal } from "../data/data"
 import { useState } from "react"
 import { Moon, Sun } from 'lucide-react'
+import ThemeToggle from "./ThemeToggle"
 
 const links = [
     { label: "Skills", href: "#skills", id: '2' },
@@ -36,14 +37,17 @@ function Nav({ onThemeToggle, dark }: NavProps) {
                                 </li>
                             ))}
                         </ul>
-                        <button onClick={onThemeToggle} className="cursor-pointer text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors">
-                            {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+                        <button onClick={onThemeToggle} className="cursor-pointer text-neutral-500 dark:text-neutral-400 transition-colors">
+                            {dark ? <Sun className="hover:text-amber-400 w-4 h-4 transition-colors duration-300" /> : <Moon className="hover:text-blue-500 w-4 h-4 transition-colors duration-300" />}
                         </button>
-                        <button 
-                            className="font-manrope bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300 px-4 py-2 rounded text-white text-sm font-semibold tracking-wide cursor-pointer hover:bg-neutral-700 transition-colors"
+                        <a 
+                            href={personal.resume}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="before:ease font-manrope text-sm font-semibold tracking-wide px-4 py-2 rounded relative overflow-hidden bg-neutral-800 text-white dark:text-black dark:bg-neutral-100 transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-10 before:rotate-4 before:bg-white dark:before:bg-black before:opacity-20 before:duration-700 hover:before:-translate-x-25"
                         >
                             Resume
-                        </button>
+                        </a>
                     </div>
                     <div className="sm:hidden">
                         <button 
@@ -82,15 +86,16 @@ function Nav({ onThemeToggle, dark }: NavProps) {
                             </li>
                         ))}
                     </ul>
-                    <div className="flex gap-3">
-                        <button 
-                            className="font-manrope bg-neutral-800 px-4 py-2 rounded text-white dark:bg-white dark:text-black dark:hover:bg-neutral-300 text-sm font-semibold tracking-wide cursor-pointer hover:bg-neutral-700 transition-colors"
+                    <div className="flex gap-3 items-center">
+                        <a 
+                            href={personal.resume}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-manrope bg-neutral-800 px-4 py-2 rounded text-white dark:bg-neutral-100 dark:text-black dark:hover:bg-neutral-300 text-sm font-semibold tracking-wide cursor-pointer hover:bg-neutral-700 transition-colors"
                         >
                             Resume
-                        </button>
-                        <button onClick={onThemeToggle} className="cursor-pointer text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors">
-                            {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-                        </button>
+                        </a>
+                        <ThemeToggle dark={dark} onToggle={onThemeToggle} />
                     </div>
                 </div>
             </div>   

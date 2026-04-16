@@ -24,6 +24,7 @@ export const personal = {
     email: "cazacualexandru485@gmail.com",
     github: "https://github.com/yegost",
     linkedin: "https://www.linkedin.com/in/alexcazacu1/",
+    resume: "/resume.pdf",
 }
 
 export const skills: SkillGroup[] = [
