@@ -1,7 +1,17 @@
+import { useEffect } from "react";
 import { projects } from "../data/data";
 import ProjectCard from "./ProjectCard";
 
 function Projects() {
+    useEffect(() => {
+        projects.forEach(project => {
+            project.images?.forEach(src => {
+                const img = new Image()
+                img.src = src
+            })
+        })
+    }, [])
+
     return(
         <section id="projects" className="font-inter dark:bg-neutral-800">
             <div className="mx-auto max-w-3xl px-6 py-20">
