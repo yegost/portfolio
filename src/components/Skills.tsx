@@ -2,7 +2,7 @@ import { skills } from "../data/data";
 
 function Skills() {
     return(
-        <section id="skills" className="bg-neutral-100 dark:bg-neutral-900">
+        <section id="skills" className="bg-neutral-200 dark:bg-neutral-900">
             <div className="mx-auto max-w-3xl px-6 py-20">
                 <p className="font-mono text-sm text-neutral-400  mb-2 tracking-wide">Skills</p>
                 <h2 className="font-manrope text-3xl font-bold text-neutral-900 dark:text-white mb-10">What I work with</h2>
@@ -10,7 +10,7 @@ function Skills() {
                     {skills.map((group, index) => (
                         <div
                             key={group.category}
-                            className={`bg-neutral-200 dark:bg-neutral-700 rounded-xl p-6 
+                            className={`bg-neutral-300 dark:bg-neutral-700 rounded-xl p-6 
                                 ${
                                     index === 1 || index === 2 ? "sm:col-span-1" : "sm:col-span-2"
                                 }`}
@@ -23,7 +23,7 @@ function Skills() {
                                 {group.items.map(item => (
                                     <span
                                         key={item}
-                                        className="bg-white border border-neutral-200 text-neutral-600 dark:bg-neutral-300 dark:text-black text-xs font-medium px-3 py-1 rounded-full"
+                                        className="bg-white border border-neutral-300 text-neutral-600 dark:bg-neutral-300 dark:text-black text-xs font-medium px-3 py-1 rounded-full"
                                     >
                                         {item}
                                     </span>

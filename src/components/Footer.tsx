@@ -18,7 +18,7 @@ function Footer() {
     }
     
     return(
-        <footer id="contact" className="font-inter bg-neutral-100 dark:bg-neutral-900 py-15">
+        <footer id="contact" className="font-inter bg-neutral-200 dark:bg-neutral-900 py-15">
             <div className="mx-auto max-w-3xl px-6">
                 <div className="flex justify-between flex-col sm:flex-row">
                     <div className="flex mb-6 sm:mb-0 items-end">
@@ -36,7 +36,7 @@ function Footer() {
                                         <li key={link.href}>
                                             <a 
                                                 href={link.href}
-                                                className="border-b border-neutral-100 hover:text-neutral-900 hover:border-neutral-900 dark:border-neutral-900 dark:hover:border-white dark:hover:text-white transition-colors"
+                                                className="border-b border-neutral-200 hover:text-neutral-900 hover:border-neutral-900 dark:border-neutral-900 dark:hover:border-white dark:hover:text-white transition-colors"
                                             >{link.label}</a>
                                         </li>
                                     ))}
@@ -52,7 +52,7 @@ function Footer() {
                                             href={personal.github}
                                             target="_blank" 
                                             rel="noreferrer"
-                                            className="border-b border-neutral-100 hover:border-neutral-900 transition-colors  hover:text-neutral-900 dark:border-neutral-900 dark:hover:border-white dark:hover:text-white"
+                                            className="border-b border-neutral-200 hover:border-neutral-900 transition-colors  hover:text-neutral-900 dark:border-neutral-900 dark:hover:border-white dark:hover:text-white"
                                         >GitHub</a>
                                     </li>
                                     <li>
@@ -60,7 +60,7 @@ function Footer() {
                                             href={personal.linkedin}
                                             target="_blank" 
                                             rel="noreferrer"
-                                            className="border-b border-neutral-100 hover:border-neutral-900 transition-colors  hover:text-neutral-900 dark:border-neutral-900 dark:hover:border-white dark:hover:text-white"
+                                            className="border-b border-neutral-200 hover:border-neutral-900 transition-colors  hover:text-neutral-900 dark:border-neutral-900 dark:hover:border-white dark:hover:text-white"
                                         >LinkedIn</a>
                                     </li>
                                     <button

@@ -18,8 +18,8 @@ function Nav({ onThemeToggle, dark }: NavProps) {
     const [openNav, setOpenNav] = useState(false)
 
     return(
-        <nav className="dark:bg-neutral-800 dark:text-white">
-            <div className="top-0 left-0 right-0 z-50 bg-neutral-100 backdrop-blur-sm dark:bg-neutral-900" id="about">
+        <nav className="dark:bg-neutral-800 bg-white dark:text-white">
+            <div className="top-0 left-0 right-0 z-50 bg-neutral-200 backdrop-blur-sm dark:bg-neutral-900" id="about">
                 <div className="mx-auto flex max-w-3xl items-center justify-between px-6">
                     <span className="font-manrope py-5 text-2xl font-bold">
                         {personal.name}

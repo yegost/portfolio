@@ -3,7 +3,7 @@ import { ArrowRight, MapPin } from "lucide-react"
 
 function Hero() {
     return(
-        <header className="dark:bg-neutral-800">
+        <header className="dark:bg-neutral-800 bg-white">
             <div className="mx-auto max-w-3xl px-6 pb-67 pt-63">
                 <div className="flex items-center mb-3 gap-1">
                     <MapPin className="w-4 text-neutral-400 dark:text-neutral-300" />
